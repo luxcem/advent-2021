@@ -40,7 +40,7 @@ def score(grid, cache, number):
 
 
 def one(input_name="one"):
-    input_lines = list(lib.read("04", input_name, str.strip))
+    input_lines = lib.read("04", input_name)
     numbers = map(int, input_lines[0].split(","))
     grids = read_grids(input_lines[2:])
     cache = np.zeros(grids.shape)
@@ -52,7 +52,7 @@ def one(input_name="one"):
 
 
 def two(input_name="one"):
-    input_lines = list(lib.read("04", input_name, str.strip))
+    input_lines = lib.read("04", input_name)
     numbers = map(int, input_lines[0].split(","))
     grids = read_grids(input_lines[2:])
     n = grids.shape[0]
@@ -68,8 +68,4 @@ def two(input_name="one"):
                 current_score = score(grids[i], cache[i], number)
                 scores.append((i, current_score))
                 wons.append(i)
-                print(f"Win {i}, number picked: {number}, score: {current_score}")
-    import ipdb
-
-    ipdb.set_trace()
-    # print(scores)
+    return scores[-1][1]

@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
-
 import lib
 
 
 def one(input_name="one"):
-    input_lines = lib.read("02", input_name, str.strip)
+    input_lines = lib.read("02", input_name)
     x = 0
     z = 0
     for line in input_lines:
@@ -20,7 +18,7 @@ def one(input_name="one"):
 
 
 def two(input_name="one"):
-    input_lines = lib.read("02", input_name, str.strip)
+    input_lines = lib.read("02", input_name)
     x = 0
     z = 0
     aim = 0

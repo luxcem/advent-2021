@@ -26,7 +26,7 @@ def read_matrix(input_lines):
 
 
 def one(input_name="one"):
-    input_lines = list(lib.read("03", input_name, str.strip))
+    input_lines = lib.read("03", input_name)
     matrix = read_matrix(input_lines)
     value, opposite = common(matrix)
     value = bin_array_to_int(value)
@@ -35,7 +35,7 @@ def one(input_name="one"):
 
 
 def two(input_name="one"):
-    input_lines = list(lib.read("03", input_name, str.strip))
+    input_lines = lib.read("03", input_name)
     matrix = read_matrix(input_lines)
 
     remaining = matrix

@@ -1,13 +1,10 @@
-#!/usr/bin/env python3
-
 import lib
 
 
 def one(input_name="one"):
-    input_lines = lib.read("01", input_name)
-    lines = map(int, map(str.strip, input_lines))
+    lines = lib.read("01", input_name, int)
     previous = None
-    diff = [0] * len(input_lines)
+    diff = [0] * len(lines)
     for i, line in enumerate(lines):
         if previous and line > previous:
             diff[i] = 1
@@ -18,8 +15,7 @@ def one(input_name="one"):
 
 
 def two(input_name="one"):
-    input_lines = lib.read("01", input_name)
-    lines = list(map(int, map(str.strip, input_lines)))
+    lines = lib.read("01", input_name, int)
     n = len(lines)
     count = 0
     for i in range(1, n - 1):
